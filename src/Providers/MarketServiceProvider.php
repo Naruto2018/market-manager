@@ -15,7 +15,7 @@ class MarketServiceProvider extends ServiceProvider
 {
     public function boot()
     {
-        $this->microMarketHttp();
+        $this->macroMarketHttp();
     }
 
     public function register()
@@ -59,7 +59,7 @@ class MarketServiceProvider extends ServiceProvider
         $this->commands($allCommand);
     }
 
-    public function microMarketHttp()
+    public function macroMarketHttp()
     {
         if (Http::hasMacro('market')) {
             return;
